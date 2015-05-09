@@ -42,7 +42,7 @@ public class CadenasAlumno {
 	
 	
 	public String reemplazaTodos(String cadena, String regla, String cambio){
-		//método que reemplaza de la cadena: cadena todos los regla/expresión que	hay por cambio
+		//método que reemplaza de la cadena todos los regla/expresión que hay por cambio
 		return cadena.replaceAll(regla, cambio);
 	}
 	

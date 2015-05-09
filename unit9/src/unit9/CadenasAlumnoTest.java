@@ -47,14 +47,30 @@ public class CadenasAlumnoTest {
 		Assert.assertTrue(comprobar);
 	}
 	
-	@Test
+	/*@Test
 	public void testEsMenor() {
 		
 		boolean comprobar = ca.esMenor("ENTORNOS","entornos");
 		
 		Assert.assertTrue(comprobar);
+	}*/
+	
+	
+	@Test
+	public void testComparaIgnorandoMayusculas() {
+		
+		boolean comprobar = ca.comparaIgnorandoMayusculas("ENTORNOS", "entornos");
+		
+		Assert.assertTrue(comprobar);
 	}
 	
+	
+	@Test
+	public void testReemplazaTodos() {
+		
+		String comprobar = ca.reemplazaTodos("Entornos", "En", "Re");
+		Assert.assertEquals("Retornos",comprobar);
+	}
 	
 	
 	
