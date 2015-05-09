@@ -11,6 +11,15 @@ public class CadenasAlumno {
 		}
 	}
 	
+	public boolean esMayor(String cadena1, String cadena2){ 
+		//método que compara dos cadenas y te indica si la primera de ellas es mayor o no
+		if(cadena1.compareTo(cadena2)<0){
+			return true;
+		}else{
+			return false;
+		}
+		
+	}
 	
 	public boolean esMenor(String cadena1, String cadena2){
 		//método que compara dos cadenas y te indica si la primera de ellas es menor o no

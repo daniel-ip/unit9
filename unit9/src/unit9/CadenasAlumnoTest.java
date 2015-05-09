@@ -39,6 +39,25 @@ public class CadenasAlumnoTest {
 		Assert.assertTrue(comprobar);
 	}
 	
+	@Test
+	public void testEsMayor() {
+		
+		boolean comprobar = ca.esMayor("ENTORNOS","entornos");
+		
+		Assert.assertTrue(comprobar);
+	}
+	
+	@Test
+	public void testEsMenor() {
+		
+		boolean comprobar = ca.esMenor("ENTORNOS","entornos");
+		
+		Assert.assertTrue(comprobar);
+	}
+	
+	
+	
+	
 	
 	
 	
