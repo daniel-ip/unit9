@@ -57,13 +57,19 @@ public class CadenasAlumno {
 	
 	public String quitaEspacios(String cadena){
 		//método que devuelve un String sin espacios previos/posteriores
-		return cadena.replace(" ", "");
+		return cadena.trim();
 	}
 	
 	
 	public String convertirMayusculas(String cadena){
 		//método que dado un String te devuelve ese mismo pero en mayúsculas
 		return cadena.toUpperCase();
+	}
+	
+	
+	public String convertirMinusculas(String cadena){
+		//método que te convierte un string todo a minúsculas
+		return cadena.toLowerCase();
 	}
 	
 	
@@ -92,15 +98,23 @@ public class CadenasAlumno {
 	
 	
 	public String extraerSubstring(String cadena, int posicionInicio){
-		//método que te devuelve una parte del string, para ello deberás de indicarle desde	donde quieres que te devuelva
+		//método que te devuelve una parte del string, para ello deberás 
+		//de indicarle desde	donde quieres que te devuelva
 		return cadena.substring(posicionInicio);
 	}
 	
 	
 	public String extraerSubstring(String cadena, int posicionInicio, int posicionFinal){
-		//función que te devuelve una parte del string, para ello deberás de indicarle desde dónde quieres que te devuelva y hasta dónde
+		//función que te devuelve una parte del string, para ello deberás de indicarle 
+		//desde dónde quieres que te devuelva y hasta dónde
 		return cadena.substring(posicionInicio, posicionFinal);
 	}
+	
+	public String concatenaCadenas(String cadena1, String cadena2){
+		// método el cual te concatena dos cadenas
+		return cadena1.concat(cadena2);
+
+	} 
 	
 	
 	public static void main(String[] args) {

@@ -47,13 +47,13 @@ public class CadenasAlumnoTest {
 		Assert.assertTrue(comprobar);
 	}
 	
-	/*@Test
+	@Test
 	public void testEsMenor() {
 		
-		boolean comprobar = ca.esMenor("ENTORNOS","entornos");
+		boolean comprobar = ca.esMenor("tornos","entornos");
 		
 		Assert.assertTrue(comprobar);
-	}*/
+	}
 	
 	
 	@Test
@@ -68,12 +68,96 @@ public class CadenasAlumnoTest {
 	@Test
 	public void testReemplazaTodos() {
 		
-		String comprobar = ca.reemplazaTodos("Entornos", "En", "Re");
-		Assert.assertEquals("Retornos",comprobar);
+		String comprobar = ca.reemplazaTodos("EntornosEn", "En", "Re");
+		Assert.assertEquals("RetornosRe",comprobar);
+	}
+	
+	@Test
+	public void testReemplazaPrimero() {
+			
+		String comprobar = ca.reemplazaPrimero("EntornosEn", "En", "Re");
+		Assert.assertEquals("RetornosEn",comprobar);
+	}
+	
+	@Test
+	public void testQuitaEspacios() {
+			
+		String comprobar = ca.quitaEspacios("    quitar espacios   ");
+		Assert.assertEquals("quitar espacios",comprobar);
+	}
+	
+	@Test
+	public void testConvertirMayusculas() {
+			
+		String comprobar = ca.convertirMayusculas("entornos");
+		Assert.assertEquals("ENTORNOS",comprobar);
+	}
+
+	
+	@Test
+	public void testConvertirMinusculas() {
+			
+		String comprobar = ca.convertirMinusculas("ENTORNOS");
+		Assert.assertEquals("entornos",comprobar);
 	}
 	
 	
+	@Test
+	public void testLongitudCadena() {
+			
+		long comprobar = ca.longitudCadena("cinco");
+		Assert.assertEquals(5,comprobar);
+	}
+
 	
+	@Test
+	public void testEmpiezaCon() {
+		
+		boolean comprobar = ca.empiezaCon("entornos","en");
+		
+		Assert.assertTrue(comprobar);
+	}
+	
+	@Test
+	public void testAcabaEn() {
+		
+		boolean comprobar = ca.acabaEn("entornos","os");
+		
+		Assert.assertTrue(comprobar);
+	}
+	
+	
+	@Test
+	public void testPosicionPrimeraCadena() {
+			
+		long comprobar = ca.posicionPrimeraCadena("OrdeNAdor","NA");
+		Assert.assertEquals(4,comprobar);
+	}
+	
+	
+	@Test
+	public void testExtraerSubstring1() {
+			
+		String comprobar = ca.extraerSubstring("ENTORNOS", 4);
+		Assert.assertEquals("RNOS",comprobar);
+	}
+	
+	@Test
+	public void testExtraerSubstring2() {
+			
+		String comprobar = ca.extraerSubstring("ENTORNOS", 4, 6);
+		Assert.assertEquals("RN",comprobar);
+	}
+	
+	
+	@Test
+	public void testConcatenaCadenas() {
+			
+		String comprobar = ca.concatenaCadenas("1º"," de DAM");
+		Assert.assertEquals("1º de DAM",comprobar);
+	}
+
+
 	
 	
 	
